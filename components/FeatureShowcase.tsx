@@ -129,15 +129,15 @@ export default function FeatureShowcase() {
             fill
             priority
             sizes="(max-width: 768px) 260px, 300px"
-            className="object-contain filter drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)] z-10"
+            className="object-contain filter drop-shadow-[0_12px_30px_rgba(0,0,0,0.95)] z-0"
           />
-          {/* Black Gradient Overlay behind Robot's Lower Legs */}
-          <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-black via-black/85 to-transparent z-15 pointer-events-none" />
+          {/* Dark Gradient Overlay directly over Robot's Lower Legs */}
+          <div className="absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-[#010513] via-[#010513]/90 to-transparent z-10 pointer-events-none" />
         </div>
 
         {/* Swipeable Feature Content Area (Overlapping Robot Legs, Left-Aligned, Direct Overlay) */}
         <div 
-          className="relative z-20 max-w-sm mx-auto -mt-16 sm:-mt-20 px-2 touch-pan-y"
+          className="relative z-30 max-w-sm mx-auto -mt-16 sm:-mt-20 px-2 touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
