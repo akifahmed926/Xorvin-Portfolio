@@ -9,34 +9,34 @@ export default function FaqSection() {
 
   const faqs = [
     {
-      question: 'How does Vortex make WhatsApp ordering easier?',
+      question: 'How much does it cost?',
       answer:
-        'Vortex keeps the ordering process simple, from browsing the menu to choosing delivery or pickup.',
+        "It depends on what you need, so we don't have one flat price. After a short call about your business and what you want to fix, we send a clear fixed quote. You'll know the full cost before we start, with no surprise charges later.",
     },
     {
-      question: 'What does SM Manager help businesses with?',
+      question: 'How long does it take to get live?',
       answer:
-        'SM Manager helps businesses manage their social media work in a more organized way.',
+        'Chatbots and automations usually go live within a couple of weeks, and websites take a few weeks. Bigger systems take longer. You get a clear timeline in your quote, and we keep you updated along the way.',
     },
     {
-      question: 'How does lead automation help businesses?',
+      question: "What's the process? What do you need from me?",
       answer:
-        'It collects and manages leads automatically, reducing repetitive manual work.',
+        'We start with a short call to understand your business. Then we send a plan and quote, build it, and let you test everything before launch. From your side, we mostly need your menu, service details or workflow, plus a few quick approvals.',
     },
     {
-      question: 'What makes a website conversion-focused?',
+      question: "Will the chatbot get things wrong? What if a customer asks something it can't handle?",
       answer:
-        'We keep the design clear and guide visitors toward the action that matters.',
+        "We test it against real customer messages before launch. If it doesn't know an answer, it passes the chat to someone on your team instead of guessing. You can also see the conversations and update its answers anytime.",
     },
     {
-      question: 'Where can AI automation help a business?',
+      question: 'Do I own the system, and what happens after launch?',
       answer:
-        'It can handle repetitive tasks, save time, and make everyday workflows easier.',
+        'Yes, you own what we build for you. After launch we help fix any issues, and if you want ongoing changes or monitoring, we offer a monthly support option. You can also just reach out when you need something.',
     },
     {
-      question: 'How do you keep modern websites easy to use?',
+      question: "I'm not technical. Can I still manage it?",
       answer:
-        'We focus on clean layouts, clear content, and simple user flows.',
+        "Yes. We build things so you can run them without coding, and we walk you through everything after launch. If you'd rather not touch anything, we can handle updates for you.",
     },
   ];
 
