@@ -20,11 +20,11 @@ export default function MarqueeBand() {
     <section className="relative w-full bg-background border-t border-b border-border-subtle py-10 overflow-hidden z-20">
       {/* 1. Heading Text (Two centered lines, small, muted, Inter font) */}
       <div className="flex flex-col items-center justify-center text-center space-y-1 mb-8">
-        <p className="font-body text-xs sm:text-sm font-medium tracking-widest uppercase text-text-muted opacity-80">
-          Powered by AI.
+        <p className="font-body text-xs sm:text-sm font-semibold tracking-widest uppercase text-text-muted">
+          POWERED BY AI.
         </p>
-        <p className="font-body text-xs sm:text-sm font-medium tracking-widest uppercase text-text-muted opacity-80">
-          Built with
+        <p className="font-body text-xs sm:text-sm font-semibold tracking-widest uppercase text-text-muted">
+          BUILT WITH THE BEST TOOLS.
         </p>
       </div>
 
