@@ -83,13 +83,13 @@ export default function Footer() {
           {/* Right Section: Navigation Links Columns */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 pt-2 lg:pt-0">
             
-            {/* Column 1: Services (Static items) */}
+            {/* Column 1: Capabilities (Static items) */}
             <div>
               <h4 
                 className="font-heading text-sm sm:text-base font-normal text-white mb-4 tracking-wide"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                Services
+                Capabilities
               </h4>
               <ul className="space-y-2.5">
                 <li>
