@@ -24,7 +24,7 @@ export default function Footer() {
       },
     },
     { 
-      label: 'Our website', 
+      label: 'About Xorvin', 
       href: 'https://xorvin-eight.vercel.app/',
       target: '_blank',
       rel: 'noopener noreferrer',

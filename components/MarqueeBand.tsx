@@ -24,7 +24,7 @@ export default function MarqueeBand() {
           Powered by AI.
         </p>
         <p className="font-body text-xs sm:text-sm font-medium tracking-widest uppercase text-text-muted opacity-80">
-          Trusted by Businesses.
+          Built with
         </p>
       </div>
 

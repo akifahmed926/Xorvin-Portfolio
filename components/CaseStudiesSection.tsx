@@ -38,7 +38,7 @@ export default function CaseStudiesSection() {
           {/* Header Right (32% width on desktop) */}
           <div className="lg:col-span-4 flex items-center justify-between px-6 sm:px-8 py-3.5 bg-[#050C1A]/40">
             <span className="font-mono text-xs text-text-muted/70 tracking-wider">
-              SINCE (2013 · 2026)
+              EST. 2026
             </span>
             <div className="relative h-9 sm:h-11 w-36 sm:w-44 flex items-center justify-end">
               <Image
