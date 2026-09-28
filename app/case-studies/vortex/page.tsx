@@ -370,8 +370,8 @@ export default function VortexDetailPage() {
           {/* 3-Column Case Study Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Card 1: EduLedger */}
-            <a
-              href="#"
+            <Link
+              href="/case-studies/eduledger-school-management"
               className="group relative flex flex-col rounded-2xl border border-[#2989FF]/30 bg-gradient-to-b from-[#050C1A] via-[#030814] to-[#02050E] overflow-hidden shadow-[0_0_35px_rgba(0,135,237,0.12)] hover:border-[#2989FF]/60 hover:shadow-[0_0_45px_rgba(0,135,237,0.25)] transition-all duration-300"
             >
               <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-[#02050E] border-b border-[#2989FF]/20 flex items-center justify-center">
@@ -401,11 +401,11 @@ export default function VortexDetailPage() {
                   <ArrowUpRight className="w-4 h-4 text-[#0087ED] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Card 2: Aura Jewelry */}
-            <a
-              href="#"
+            <Link
+              href="/case-studies/aura-jewelry-web-design"
               className="group relative flex flex-col rounded-2xl border border-[#2989FF]/30 bg-gradient-to-b from-[#050C1A] via-[#030814] to-[#02050E] overflow-hidden shadow-[0_0_35px_rgba(0,135,237,0.12)] hover:border-[#2989FF]/60 hover:shadow-[0_0_45px_rgba(0,135,237,0.25)] transition-all duration-300"
             >
               <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-[#02050E] border-b border-[#2989FF]/20 flex items-center justify-center">
@@ -435,10 +435,10 @@ export default function VortexDetailPage() {
                   <ArrowUpRight className="w-4 h-4 text-[#0087ED] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Card 3: SM Manager */}
-            <a
+            <Link
               href="/case-studies/sm-manager-taha-nabeel"
               className="group relative flex flex-col rounded-2xl border border-[#2989FF]/30 bg-gradient-to-b from-[#050C1A] via-[#030814] to-[#02050E] overflow-hidden shadow-[0_0_35px_rgba(0,135,237,0.12)] hover:border-[#2989FF]/60 hover:shadow-[0_0_45px_rgba(0,135,237,0.25)] transition-all duration-300"
             >
@@ -469,7 +469,7 @@ export default function VortexDetailPage() {
                   <ArrowUpRight className="w-4 h-4 text-[#0087ED] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
 
         </div>
