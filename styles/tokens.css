@@ -1,0 +1,73 @@
+/* ==========================================================================
+   XORVIN PORTFOLIO — DESIGN TOKENS & FOUNDATION VARIABLES
+   Source Palette: Arctic Titanium (Color Palate.png)
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. BRAND COLOR TOKENS
+     Extracted precisely from "Color Palate.png" & Primary/Secondary CTA Tokens
+     ------------------------------------------------------------------------ */
+  --color-background: #010513;         /* Midnight Base - Deep navy/black base */
+  --color-surface: #151515;            /* Graphite - Surface containers, card backgrounds */
+  --color-surface-secondary: #01071D;  /* Deep Midnight Blue - Secondary CTA background token */
+  --color-text-primary: #D4DBE6;       /* Arctic Titanium - Headings & primary text */
+  --color-text-muted: #8E99A8;         /* Steel Silver - Secondary text & muted labels */
+  --color-primary: #0E3B7F;            /* Primary Blue Accent */
+  --color-secondary: #8FD8FF;          /* Ice Blue - Secondary highlight & bright neon accents */
+  --color-accent: #0E3B7F;             /* Accent Color */
+  --color-accent-hover: #4CB8E4;       /* Accent Hover */
+
+  /* Exact Primary Button Linear Gradient Token: top stop #0E3B7F, bottom stop #4CB8E4 */
+  --gradient-primary: linear-gradient(180deg, #0E3B7F 0%, #4CB8E4 100%);
+
+  /* Translucent & Border Tokens */
+  --color-border-subtle: rgba(142, 153, 168, 0.15); /* Steel Silver 15% opacity */
+  --color-border-glow: rgba(14, 59, 127, 0.35);      /* Primary Blue 35% opacity */
+  --color-surface-glass: rgba(21, 21, 21, 0.75);    /* Graphite Glassmorphism */
+
+  /* ------------------------------------------------------------------------
+     2. GLOW & NEON EFFECTS (Sci-Fi Aesthetic)
+     ------------------------------------------------------------------------ */
+  --glow-electric: 0 0 25px rgba(14, 59, 127, 0.4);
+  --glow-ice: 0 0 25px rgba(143, 216, 255, 0.35);
+  --glow-subtle: 0 0 15px rgba(14, 59, 127, 0.15);
+  --glow-text: 0 0 12px rgba(14, 59, 127, 0.5);
+
+  /* ------------------------------------------------------------------------
+     3. TYPOGRAPHY TOKENS
+     Heading: Michroma | Body: Inter (Loaded via Google Fonts)
+     ------------------------------------------------------------------------ */
+  --font-heading: 'Michroma', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Type Scale */
+  --text-h1: clamp(2.5rem, 5vw + 1rem, 4.5rem);      /* 40px - 72px */
+  --text-h2: clamp(2rem, 3.5vw + 1rem, 3.25rem);    /* 32px - 52px */
+  --text-h3: clamp(1.5rem, 2.5vw + 0.75rem, 2.25rem);/* 24px - 36px */
+  --text-h4: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);/* 20px - 28px */
+  --text-h5: clamp(1.125rem, 1vw + 0.5rem, 1.375rem);/* 18px - 22px */
+  --text-h6: clamp(1rem, 0.5vw + 0.5rem, 1.125rem);  /* 16px - 18px */
+  
+  --text-body-lead: clamp(1.125rem, 0.5vw + 0.875rem, 1.25rem); /* 18px - 20px */
+  --text-body: 1rem;       /* 16px */
+  --text-small: 0.875rem;  /* 14px */
+  --text-caption: 0.75rem; /* 12px */
+
+  /* ------------------------------------------------------------------------
+     4. SPACING TOKENS (Strict 8px Grid System)
+     ------------------------------------------------------------------------ */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1.0rem;  /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2.0rem;  /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3.0rem; /* 48px */
+  --space-16: 4.0rem; /* 64px */
+  --space-20: 5.0rem; /* 80px */
+  --space-24: 6.0rem; /* 96px */
+  --space-32: 8.0rem; /* 128px */
+}
