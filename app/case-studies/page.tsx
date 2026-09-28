@@ -72,7 +72,7 @@ export default function CaseStudiesPage() {
     {
       category: 'VIDEO EDITING',
       filterGroup: 'Video Editing',
-      title: 'Kinetic × CETA EV',
+      title: 'CETA EV',
       image: '/ev-charger-mockup-1-replaced.jpg',
       fit: 'object-cover',
       href: '/case-studies/kinetic-ceta-ev',
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
     {
       category: 'VIDEO EDITING',
       filterGroup: 'Video Editing',
-      title: 'Kinetic × ChargeX',
+      title: 'ChargeX',
       image: '/kinetic-chargex-mockup-1.png',
       fit: 'object-cover',
       href: '/case-studies/kinetic-chargex',
@@ -88,7 +88,7 @@ export default function CaseStudiesPage() {
     {
       category: 'VIDEO EDITING',
       filterGroup: 'Video Editing',
-      title: 'Kinetic × Maison Vérité',
+      title: 'Maison Vérité',
       image: '/kinetic-maison-verite-mockup-2.jpg',
       fit: 'object-cover',
       href: '/case-studies/kinetic-maison-verite',

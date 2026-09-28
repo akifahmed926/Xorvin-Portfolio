@@ -15,7 +15,7 @@ export default function CaseStudiesSection() {
     { name: 'Aura Jewelry — Web Design', year: '2025', href: '/case-studies/aura-jewelry-web-design' },
     { name: 'SM Manager — Social Media Management', year: '2024', href: '/case-studies/sm-manager-taha-nabeel' },
     { name: 'Order Meal — Restaurant Web Design', year: '2024', href: '/case-studies/order-meal-branding' },
-    { name: 'Kinetic × CETA EV', year: '2025', href: '/case-studies/kinetic-ceta-ev' },
+    { name: 'CETA EV', year: '2025', href: '/case-studies/kinetic-ceta-ev' },
   ];
 
   return (

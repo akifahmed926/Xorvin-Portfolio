@@ -11,7 +11,7 @@ export default function Footer() {
       href: '/case-studies',
     },
     { 
-      label: 'Services', 
+      label: 'Our Capabilities', 
       href: '/#services',
       onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
         if (typeof window !== 'undefined' && window.location.pathname === '/') {

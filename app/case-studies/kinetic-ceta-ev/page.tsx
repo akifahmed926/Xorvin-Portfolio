@@ -133,21 +133,21 @@ export default function KineticCetaEvCaseStudyPage() {
                 className="font-heading text-xl sm:text-2xl lg:text-[28px] font-extrabold text-white uppercase tracking-tight"
                 style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.2' }}
               >
-                Kinetic × CETA EV — Product Launch Ad
+                CETA EV — Product Launch Ad
               </h1>
             </div>
 
             {/* Right Column: Lightning Icon + Static Label + Description Paragraph */}
             <div className="lg:col-span-5 flex flex-col justify-center space-y-3 sm:space-y-4 lg:pl-8">
               
-              {/* Top Row: Lightning Icon + Plain Static Kinetic × CETA EV Label */}
+              {/* Top Row: Lightning Icon + Plain Static CETA EV Label */}
               <div className="flex items-center space-x-2.5 sm:space-x-3">
                 <span className="text-2xl sm:text-3xl leading-none select-none">⚡</span>
                 <span 
                   className="font-heading text-xs sm:text-sm lg:text-base font-extrabold text-[#0087ED] tracking-wide uppercase"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  Kinetic × CETA EV
+                  CETA EV
                 </span>
               </div>
 
@@ -387,7 +387,7 @@ export default function KineticCetaEvCaseStudyPage() {
 
                     {/* Cell 3: Light bg */}
                     <div className="bg-white p-4 sm:p-5 flex flex-col justify-between">
-                      <span className="font-heading text-base sm:text-lg lg:text-xl font-extrabold text-black tracking-tight whitespace-nowrap mb-2">1 day</span>
+                      <span className="font-heading text-base sm:text-lg lg:text-xl font-extrabold text-black tracking-tight whitespace-nowrap mb-2">4 days</span>
                       <span className="font-body text-xs sm:text-sm font-semibold text-black/80 leading-snug">Edit &amp; Delivery</span>
                     </div>
                   </div>
@@ -437,7 +437,7 @@ export default function KineticCetaEvCaseStudyPage() {
                   <div className="py-4 sm:py-5 flex items-start justify-between space-x-4">
                     <span className="font-body text-xs sm:text-sm text-text-muted/70 font-medium flex-shrink-0">Project Duration:</span>
                     <span className="font-body text-xs sm:text-sm text-white font-medium text-right leading-relaxed max-w-[360px]">
-                      1 day
+                      4 days
                     </span>
                   </div>
                 </div>
