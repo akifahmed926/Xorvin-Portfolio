@@ -193,10 +193,10 @@ export default function ContactPage() {
               </p>
             </div>
             <a 
-              href="mailto:contact@xorvin.io"
+              href="mailto:xorvin@gmail.com"
               className="font-body text-xs sm:text-sm text-[#0087ED] font-medium hover:underline block"
             >
-              contact@xorvin.io
+              xorvin@gmail.com
             </a>
           </div>
 
@@ -217,10 +217,10 @@ export default function ContactPage() {
               </p>
             </div>
             <a 
-              href="tel:+15555555555"
+              href="tel:+031323434"
               className="font-body text-xs sm:text-sm text-[#0087ED] font-medium hover:underline block"
             >
-              +1 555 555 5555
+              +031323434
             </a>
           </div>
 
