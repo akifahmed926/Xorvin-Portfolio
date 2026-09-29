@@ -65,15 +65,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
         
         {/* Left: XORVIN Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group py-0">
-          <div className="relative h-16 sm:h-20 md:h-22 lg:h-24 w-auto flex items-center">
+        <Link href="/" className="flex items-center group py-0 flex-shrink-0">
+          <div className="relative w-[140px] sm:w-[175px] h-[44px] sm:h-[55px] flex items-center">
             <Image
-              src="/logo.png"
+              src="/replace-logo.png"
               alt="Xorvin — For The Ones Ahead"
-              width={340}
-              height={100}
+              width={175}
+              height={55}
               priority
-              className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(40,137,255,0.3)] group-hover:drop-shadow-[0_0_22px_rgba(40,137,255,0.5)] transition-all duration-300"
+              className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(40,137,255,0.3)] group-hover:drop-shadow-[0_0_22px_rgba(40,137,255,0.5)] transition-all duration-300"
             />
           </div>
         </Link>
