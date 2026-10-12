@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import BadgeTextReveal from './BadgeTextReveal';
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -58,7 +59,7 @@ export default function FaqSection() {
           {/* FAQs Pill Badge */}
           <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/40 bg-surface/80 backdrop-blur-md text-xs font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2.5" />
-            FAQs
+            <BadgeTextReveal text="FAQs" />
           </div>
 
           {/* Heading */}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Michroma, Inter } from 'next/font/google';
+import SmoothScroll from '@/components/SmoothScroll';
 import './globals.css';
 
 const michroma = Michroma({
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark scroll-smooth ${michroma.variable} ${inter.variable}`}>
       <body className="bg-background text-text-primary min-h-screen antialiased selection:bg-primary selection:text-black">
+        <SmoothScroll />
         {children}
       </body>
     </html>

@@ -2,7 +2,8 @@
 
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform, easeInOut, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, easeInOut, AnimatePresence } from 'framer-motion';
+import BadgeTextReveal from './BadgeTextReveal';
 
 export default function FeatureShowcase() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export default function FeatureShowcase() {
       stat: '24h Runtime',
       eyebrow: '24h of battery life',
       description: 'Powerful AI-driven mobile applications built for iOS and Android, combining intelligent features, seamless experiences, and smart backend automation.',
-      title: 'AI Mobile Applications',
+      title: 'AI Mobile Applications & Calling Agents',
     },
   ];
 
@@ -42,37 +43,26 @@ export default function FeatureShowcase() {
     offset: ['start start', 'end end'],
   });
 
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 80,
+    damping: 25,
+    restDelta: 0.0001,
+  });
+
   // ----------------------------------------------------
-  // DESKTOP SCROLL PROGRESS TRANSFORMS:
+  // DESKTOP SCROLL PROGRESS TRANSFORMS (Smooth & Extended Hold Pacing):
   // ----------------------------------------------------
-  const blockAOpacity = useTransform(scrollYProgress, [0.0, 0.04, 0.16, 0.20], [0, 1, 1, 0], { ease: easeInOut });
-  const blockATranslateY = useTransform(scrollYProgress, [0.0, 0.08, 0.20], [220, 0, -220], { ease: easeInOut });
+  const blockAOpacity = useTransform(smoothProgress, [0.03, 0.08, 0.20, 0.25], [0, 1, 1, 0], { ease: easeInOut });
+  const blockATranslateY = useTransform(smoothProgress, [0.03, 0.08, 0.20, 0.25], [60, 0, 0, -60], { ease: easeInOut });
 
-  const blockBOpacity = useTransform(scrollYProgress, [0.20, 0.26, 0.44, 0.50], [0, 1, 1, 0], { ease: easeInOut });
-  const blockBTranslateY = useTransform(scrollYProgress, [0.20, 0.26, 0.40, 0.50], [220, 0, 0, -220], { ease: easeInOut });
+  const blockCOpacity = useTransform(smoothProgress, [0.26, 0.32, 0.46, 0.51], [0, 1, 1, 0], { ease: easeInOut });
+  const blockCTranslateY = useTransform(smoothProgress, [0.26, 0.32, 0.46, 0.51], [60, 0, 0, -60], { ease: easeInOut });
 
-  const blockCOpacity = useTransform(scrollYProgress, [0.20, 0.26, 0.44, 0.50], [0, 1, 1, 0], { ease: easeInOut });
-  const blockCTranslateY = useTransform(scrollYProgress, [0.20, 0.26, 0.40, 0.50], [220, 0, 0, -220], { ease: easeInOut });
+  const blockDOpacity = useTransform(smoothProgress, [0.52, 0.58, 0.72, 0.77], [0, 1, 1, 0], { ease: easeInOut });
+  const blockDTranslateY = useTransform(smoothProgress, [0.52, 0.58, 0.72, 0.77], [60, 0, 0, -60], { ease: easeInOut });
 
-  const glowTop = useTransform(scrollYProgress, [0.20, 0.50], ['7%', '36%'], { ease: easeInOut });
-  const glowLeft = useTransform(scrollYProgress, [0.20, 0.50], ['50%', '42%'], { ease: easeInOut });
-
-  const elbowCalloutOpacity = useTransform(scrollYProgress, [0.30, 0.36, 0.44, 0.50], [0, 1, 1, 0], { ease: easeInOut });
-  const elbowCalloutTranslateY = useTransform(scrollYProgress, [0.30, 0.36, 0.50], [15, 0, 0], { ease: easeInOut });
-
-  const blockDOpacity = useTransform(scrollYProgress, [0.50, 0.56, 0.65, 0.72], [0, 1, 1, 0], { ease: easeInOut });
-  const blockDTranslateY = useTransform(scrollYProgress, [0.50, 0.56, 0.72], [220, 0, -220], { ease: easeInOut });
-
-  const precisionCalloutOpacity = useTransform(scrollYProgress, [0.66, 0.74, 0.88, 0.96], [0, 1, 1, 0], { ease: easeInOut });
-  const precisionCalloutTranslateY = useTransform(scrollYProgress, [0.66, 0.74, 0.96], [15, 0, 0], { ease: easeInOut });
-
-  const fullGlowOpacity = useTransform(scrollYProgress, [0.88, 0.96, 1.0], [0, 1, 1], { ease: easeInOut });
-
-  const runtimeCalloutOpacity = useTransform(scrollYProgress, [0.88, 0.96, 1.0], [0, 1, 1], { ease: easeInOut });
-  const runtimeCalloutTranslateY = useTransform(scrollYProgress, [0.88, 0.96, 1.0], [15, 0, 0], { ease: easeInOut });
-
-  const blockFOpacity = useTransform(scrollYProgress, [0.66, 0.75, 1.0], [0, 1, 1], { ease: easeInOut });
-  const blockFTranslateY = useTransform(scrollYProgress, [0.66, 0.75, 1.0], [220, 0, 0], { ease: easeInOut });
+  const blockFOpacity = useTransform(smoothProgress, [0.78, 0.84, 0.96, 1.0], [0, 1, 1, 0], { ease: easeInOut });
+  const blockFTranslateY = useTransform(smoothProgress, [0.78, 0.84, 0.96, 1.0], [60, 0, 0, -60], { ease: easeInOut });
 
   // Touch Swipe Handlers for Mobile Viewport
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -117,7 +107,7 @@ export default function FeatureShowcase() {
         <div className="relative z-10 text-center mb-6">
           <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/40 bg-surface/80 backdrop-blur-md text-xs font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2.5" />
-            OUR CAPABILITIES
+            <BadgeTextReveal text="OUR CAPABILITIES" />
           </div>
         </div>
 
@@ -200,7 +190,7 @@ export default function FeatureShowcase() {
       {/* ============================================================ */}
       {/* DESKTOP VIEWPORT (>= 768px): Scroll-pinned Animated Circle */}
       {/* ============================================================ */}
-      <section id="services" ref={targetRef} className="hidden md:block relative w-full h-[800vh] bg-background">
+      <section id="services" ref={targetRef} className="hidden md:block relative w-full h-[1300vh] bg-background">
         {/* Sticky Inner Container pinned to viewport (position: sticky, top: 0, height: 100vh) */}
         <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center border-b border-border-subtle z-20">
           
@@ -211,7 +201,7 @@ export default function FeatureShowcase() {
           <div className="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2 z-30 pointer-events-none text-center">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/40 bg-surface/80 backdrop-blur-md text-xs font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2.5" />
-              OUR CAPABILITIES
+              <BadgeTextReveal text="OUR CAPABILITIES" />
             </div>
           </div>
 
@@ -238,50 +228,9 @@ export default function FeatureShowcase() {
           </div>
 
           {/* ---------------------------------------------------- */}
-          {/* 150PX #0087ED SVG RADIAL GRADIENT GLOW CIRCLE */}
-          {/* ---------------------------------------------------- */}
-          <motion.div
-            style={{ 
-              opacity: blockBOpacity,
-              top: glowTop,
-              left: glowLeft,
-            }}
-            className="absolute -translate-x-1/2 w-[150px] h-[150px] pointer-events-none z-5"
-          >
-            <svg width="150" height="150" viewBox="0 0 150 150" className="w-full h-full">
-              <defs>
-                <radialGradient id="iqGlowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                  <stop offset="0%" stopColor="#0087ED" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#0087ED" stopOpacity="0" />
-                </radialGradient>
-              </defs>
-              <circle cx="75" cy="75" r="75" fill="url(#iqGlowGradient)" />
-            </svg>
-          </motion.div>
-
-          {/* ---------------------------------------------------- */}
           {/* CENTER FIXED GENUINE FULL ROBOT CONTAINER */}
           {/* ---------------------------------------------------- */}
           <div className="relative z-10 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[390px] h-[78vh] px-4 flex justify-center items-center pointer-events-none transform translate-y-4">
-            
-            {/* Full Body Soft Blue (#0087ED) Ambient Radial Glow behind Robot */}
-            <motion.div
-              style={{ opacity: fullGlowOpacity }}
-              className="absolute inset-0 flex items-center justify-center pointer-events-none z-5"
-            >
-              <svg width="280" height="750" viewBox="0 0 280 750" className="w-full h-full max-w-[280px] max-h-[750px] overflow-visible">
-                <defs>
-                  <radialGradient id="fullRobotBodyGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                    <stop offset="0%" stopColor="#0087ED" stopOpacity="1" />
-                    <stop offset="45%" stopColor="#0087ED" stopOpacity="0.85" />
-                    <stop offset="80%" stopColor="#0087ED" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#0087ED" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-                <ellipse cx="140" cy="375" rx="140" ry="360" fill="url(#fullRobotBodyGlow)" />
-              </svg>
-            </motion.div>
-
             <Image
               src="/full-robot.png"
               alt="Xorvin Genuine Full Standing Robot"
@@ -290,173 +239,6 @@ export default function FeatureShowcase() {
               sizes="(max-width: 768px) 280px, 390px"
               className="object-contain filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.95)] z-10"
             />
-
-            {/* BLOCK B: "150+ IQ" CALLOUT */}
-            <motion.div
-              style={{ opacity: blockBOpacity, y: blockBTranslateY }}
-              className="absolute inset-0 pointer-events-none z-30"
-            >
-              <svg className="absolute top-[6%] sm:top-[7%] left-[55%] sm:left-[57%] w-[180px] sm:w-[220px] h-[120px] pointer-events-none overflow-visible z-20">
-                <circle
-                  cx="6"
-                  cy="6"
-                  r="3"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="1"
-                  strokeWidth="1.2"
-                  strokeDasharray="2 2"
-                />
-                <path
-                  d="M 9 6 L 45 6 L 85 45"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="0.85"
-                  strokeWidth="1.5"
-                  strokeDasharray="3 3"
-                />
-              </svg>
-              <div className="absolute top-[12%] sm:top-[13%] left-[calc(55%+85px)] sm:left-[calc(57%+85px)] pointer-events-auto z-30">
-                <div className="px-3.5 py-1.5 rounded-md bg-[#050C1A]/95 border border-primary flex items-center justify-center">
-                  <span 
-                    className="font-heading text-xs sm:text-sm font-bold text-white tracking-wider whitespace-nowrap select-none"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    150+ IQ
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* BLOCK: "96% Human Motion" CALLOUT */}
-            <motion.div
-              style={{ opacity: elbowCalloutOpacity, y: elbowCalloutTranslateY }}
-              className="absolute inset-0 pointer-events-none z-30"
-            >
-              <svg className="absolute top-[32%] sm:top-[33%] right-[55%] sm:right-[57%] w-[200px] sm:w-[240px] h-[120px] pointer-events-none overflow-visible z-20">
-                <circle
-                  cx="190"
-                  cy="10"
-                  r="3"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="1"
-                  strokeWidth="1.2"
-                  strokeDasharray="2 2"
-                />
-                <path
-                  d="M 187 10 L 140 10 L 100 45"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="0.85"
-                  strokeWidth="1.5"
-                  strokeDasharray="3 3"
-                />
-              </svg>
-              <div className="absolute top-[36%] sm:top-[37%] right-[calc(55%+100px)] sm:right-[calc(57%+100px)] pointer-events-auto z-30">
-                <div className="px-4 py-2 rounded-md bg-[#050C1A]/95 border border-primary flex flex-col items-end text-right">
-                  <span 
-                    className="font-heading text-sm sm:text-base font-bold text-white tracking-wider select-none leading-tight mb-0.5"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    96 %
-                  </span>
-                  <span 
-                    className="font-heading text-xs sm:text-sm font-medium text-white tracking-wider whitespace-nowrap select-none leading-tight"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    Human Motion
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* BLOCK E: "0.1mm Precision" CALLOUT */}
-            <motion.div
-              style={{ opacity: precisionCalloutOpacity, y: precisionCalloutTranslateY }}
-              className="absolute inset-0 pointer-events-none z-30"
-            >
-              <svg className="absolute top-[45%] sm:top-[46%] left-[55%] sm:left-[57%] w-[180px] sm:w-[220px] h-[160px] pointer-events-none overflow-visible z-20">
-                <circle
-                  cx="6"
-                  cy="110"
-                  r="3"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="1"
-                  strokeWidth="1.2"
-                  strokeDasharray="2 2"
-                />
-                <path
-                  d="M 9 110 L 45 110 L 85 20"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="0.85"
-                  strokeWidth="1.5"
-                  strokeDasharray="3 3"
-                />
-              </svg>
-              <div className="absolute top-[45%] sm:top-[46%] left-[calc(55%+85px)] sm:left-[calc(57%+85px)] pointer-events-auto z-30">
-                <div className="px-4 py-2 rounded-md bg-[#050C1A]/95 border border-primary flex flex-col items-center justify-center text-center">
-                  <span 
-                    className="font-heading text-sm sm:text-base font-bold text-white tracking-wider select-none leading-tight mb-0.5"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    0.1mm
-                  </span>
-                  <span 
-                    className="font-heading text-xs sm:text-sm font-medium text-white tracking-wider whitespace-nowrap select-none leading-tight"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    Precision
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* BLOCK: "24h Runtime" CALLOUT */}
-            <motion.div
-              style={{ opacity: runtimeCalloutOpacity, y: runtimeCalloutTranslateY }}
-              className="absolute inset-0 pointer-events-none z-30"
-            >
-              <svg className="absolute top-[46%] sm:top-[47%] right-[55%] sm:right-[57%] w-[200px] sm:w-[240px] h-[120px] pointer-events-none overflow-visible z-20">
-                <circle
-                  cx="190"
-                  cy="10"
-                  r="3"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="1"
-                  strokeWidth="1.2"
-                  strokeDasharray="2 2"
-                />
-                <path
-                  d="M 187 10 L 140 10 L 100 45"
-                  fill="none"
-                  stroke="#0087ED"
-                  strokeOpacity="0.85"
-                  strokeWidth="1.5"
-                  strokeDasharray="3 3"
-                />
-              </svg>
-              <div className="absolute top-[50%] sm:top-[51%] right-[calc(55%+100px)] sm:right-[calc(57%+100px)] pointer-events-auto z-30">
-                <div className="px-4 py-2 rounded-md bg-[#050C1A]/95 border border-primary flex flex-col items-end text-right">
-                  <span 
-                    className="font-heading text-sm sm:text-base font-bold text-white tracking-wider select-none leading-tight mb-0.5"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    24h
-                  </span>
-                  <span 
-                    className="font-heading text-xs sm:text-sm font-medium text-white tracking-wider whitespace-nowrap select-none leading-tight"
-                    style={{ fontFamily: 'var(--font-heading)' }}
-                  >
-                    Runtime
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
           </div>
 
           {/* BLOCK A: LEFT SIDE TEXT BLOCK */}
@@ -528,15 +310,15 @@ export default function FeatureShowcase() {
             style={{ opacity: blockFOpacity, y: blockFTranslateY }}
             className="absolute top-[45%] sm:top-[46%] right-6 sm:right-10 lg:right-16 xl:right-24 pointer-events-none z-30 flex justify-end"
           >
-            <div className="relative pointer-events-auto max-w-[290px] sm:max-w-[330px] lg:max-w-[360px] flex flex-col items-end text-right">
+            <div className="relative pointer-events-auto max-w-[300px] sm:max-w-[340px] lg:max-w-[380px] flex flex-col items-end text-right">
               <div className="text-[#0087ED] font-body text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-1.5">
                 24h of battery life
               </div>
               <h2 
-                className="font-heading text-xl sm:text-2xl lg:text-[30px] font-normal text-text-primary mb-3 leading-[1.2] tracking-tight drop-shadow-[0_0_12px_rgba(40,137,255,0.25)]"
+                className="font-heading text-xl sm:text-2xl lg:text-[28px] font-normal text-text-primary mb-3 leading-[1.2] tracking-tight drop-shadow-[0_0_12px_rgba(40,137,255,0.25)]"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                AI Mobile Applications
+                AI Mobile Applications &amp; Calling Agents
               </h2>
               <p className="font-body text-[11px] sm:text-xs lg:text-sm text-text-muted leading-relaxed font-normal">
                 Powerful AI-driven mobile applications built for iOS and Android, combining intelligent features, seamless experiences, and smart backend automation.

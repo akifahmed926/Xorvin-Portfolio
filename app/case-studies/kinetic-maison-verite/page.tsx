@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import BadgeTextReveal from '@/components/BadgeTextReveal';
 import { ArrowUpRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 
 export default function KineticMaisonVeriteCaseStudyPage() {
@@ -471,7 +472,7 @@ export default function KineticMaisonVeriteCaseStudyPage() {
           <div className="relative mb-12 sm:mb-16 flex flex-col items-center justify-center text-center">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#0087ED]/40 bg-[#050C1A]/80 backdrop-blur-md text-xs font-semibold tracking-wider text-white uppercase shadow-glow-subtle mb-4">
               <span className="w-2 h-2 rounded-full bg-[#0087ED] animate-pulse mr-2.5" />
-              EXPLORE MORE
+              <BadgeTextReveal text="EXPLORE MORE" />
             </div>
             <h2 
               className="font-heading text-2xl sm:text-3xl lg:text-4xl font-normal text-white tracking-tight leading-[1.25]"

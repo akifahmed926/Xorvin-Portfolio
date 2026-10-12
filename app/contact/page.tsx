@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import BadgeTextReveal from '@/components/BadgeTextReveal';
 import { ArrowUpRight, Mail, Phone, Globe } from 'lucide-react';
 
 export default function ContactPage() {
@@ -36,7 +37,7 @@ export default function ContactPage() {
           {/* Eyebrow Pill Badge */}
           <div className="inline-flex items-center px-3.5 py-1 rounded-full border border-primary/40 bg-surface/80 backdrop-blur-md text-[11px] font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse mr-2" />
-            CONTACT US
+            <BadgeTextReveal text="CONTACT US" />
           </div>
 
           {/* Main Heading */}

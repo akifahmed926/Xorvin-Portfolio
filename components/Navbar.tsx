@@ -44,12 +44,21 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     if (typeof window !== 'undefined' && window.location.pathname === '/') {
       e.preventDefault();
+      const lenis = (window as any).__lenis;
       if (targetId === 'hero') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (lenis) {
+          lenis.scrollTo(0, { duration: 1.2 });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       } else {
         const el = document.getElementById(targetId);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
+          if (lenis) {
+            lenis.scrollTo(el, { duration: 1.2, offset: 0 });
+          } else {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       }
     }

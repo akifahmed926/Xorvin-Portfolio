@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, RotateCw } from 'lucide-react';
+import BadgeTextReveal from './BadgeTextReveal';
 
 export default function HeroContent() {
   const marqueeText = "XORVIN × AI — XORVIN, an AI automation agency, partners with AI to shape next-generation systems for intelligent, human-aligned automation.";
@@ -69,7 +70,7 @@ export default function HeroContent() {
             {/* Eyebrow Badge (Positioned clearly below fixed navbar with ample clearance) */}
             <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/40 bg-surface/60 backdrop-blur-md text-xs font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2.5" />
-              WEB, APPS &amp; AI AUTOMATION AGENCY
+              <BadgeTextReveal text="WEB, APPS & AI AUTOMATION AGENCY" />
             </div>
 
             {/* Main Heading */}
@@ -152,12 +153,14 @@ export default function HeroContent() {
                 <ArrowUpRight className="w-5 h-5 text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
 
-              <Link
-                href="/contact"
+              <a
+                href="https://xorvin-eight.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-7 py-3.5 rounded-2xl text-base font-semibold text-white bg-surface-secondary border border-primary/40 shadow-glow-subtle hover:bg-gradient-primary hover:border-primary/60 hover:shadow-glow-electric hover:scale-[1.03] transition-all duration-300 ease-in-out"
               >
-                <span>Let&apos;s Build Yours</span>
-              </Link>
+                <span>About Xorvin</span>
+              </a>
             </div>
 
           </div>

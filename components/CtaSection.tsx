@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import BadgeTextReveal from './BadgeTextReveal';
 
 export default function CtaSection() {
   return (
@@ -19,7 +20,7 @@ export default function CtaSection() {
         {/* Eyebrow Pill Badge */}
         <div className="relative z-10 inline-flex items-center px-3.5 py-1 rounded-full border border-primary/40 bg-surface/80 backdrop-blur-md text-[11px] font-semibold tracking-wider text-text-primary uppercase shadow-glow-subtle mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse mr-2" />
-          LET&apos;S TALK
+          <BadgeTextReveal text="LET'S TALK" />
         </div>
 
         {/* Main Heading */}
